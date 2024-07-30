@@ -9,9 +9,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
               'Hello Jack,',
               style: TextStyle(color: Colors.black, fontSize: 24),
@@ -171,7 +171,7 @@ class TaskCard extends StatelessWidget {
             ),
             if (subtasks != null) ...[
               const SizedBox(height: 8),
-              ...subtasks!.map((subtask) => Text('- $subtask')).toList(),
+              ...subtasks!.map((subtask) => Text('- $subtask')),
             ],
           ],
         ),
